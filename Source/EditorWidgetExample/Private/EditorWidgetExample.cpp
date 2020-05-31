@@ -76,6 +76,10 @@ void FEditorWidgetExampleModule::PluginButtonClicked()
         {
             NewDockTab = TabManager->InvokeTab(EditorWidgetRegistrationName);
         }
+		else
+		{
+			return;
+		}
 
         UWorld* World = GEditor->GetEditorWorldContext().World();
         check(World);
